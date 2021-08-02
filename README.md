@@ -17,3 +17,6 @@ File Description :
 - quoter.py : Make request to Quotable and send out the quote as a notification
 - kill_process.sh : stops the notifier by killing the processID saved in save_pid.txt
 - process.log : keeps track of the execution results 
+
+ MIT License<br />
+ Copyright (c) 2021 Surag Puliyathamil
