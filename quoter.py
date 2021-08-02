@@ -14,15 +14,18 @@
 # LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR 
 # IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-while true
-do
-{
+import os
+import requests
 
-	 currenttime=$(date +%H:%M)
-   		if [[ "$currenttime" > "23:30" ]] || [[ "$currenttime" < "08:30" ]]; then
-     		python3 quoter.py > process.log
-   		else
-     		sleep 60m	
-   		fi
-}
-done
+def notify(title, subtitle, message):
+    #send notification
+    t = '-title {!r}'.format(title)
+    s = '-subtitle {!r}'.format(subtitle)
+    m = '-message {!r}'.format(message)
+    os.system('terminal-notifier {}'.format(' '.join([m, t, s])))
+
+
+url="https://api.quotable.io/random"
+r = requests.get(url=url)
+data = r.json()
+notify("More Power to you!!",data['author'],data['content'])
