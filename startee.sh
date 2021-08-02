@@ -14,15 +14,17 @@
 # LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR 
 # IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+prodStartTime="083000"
+prodEndTime="233000"
+
 while true
 do
 {
-
-	 currenttime=$(date +%H:%M)
-   		if [[ "$currenttime" > "23:30" ]] || [[ "$currenttime" < "08:30" ]]; then
+		currentTime=`date +"%H%M%S"`
+   		if [[ ! ( "$currentTime" < "$prodStartTime" || "$currentTime" > "$prodEndTime" ) ]]; then
      		python3 quoter.py > process.log
    		else
-     		sleep 60m	
+     		sleep 90m 	
    		fi
 }
 done

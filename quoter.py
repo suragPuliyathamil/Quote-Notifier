@@ -18,7 +18,6 @@ import os
 import requests
 
 def notify(title, subtitle, message):
-    #send notification
     t = '-title {!r}'.format(title)
     s = '-subtitle {!r}'.format(subtitle)
     m = '-message {!r}'.format(message)
