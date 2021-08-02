@@ -23,6 +23,7 @@ do
 		currentTime=`date +"%H%M%S"`
    		if [[ ! ( "$currentTime" < "$prodStartTime" || "$currentTime" > "$prodEndTime" ) ]]; then
      		python3 quoter.py > process.log
+     		sleep 90m
    		else
      		sleep 90m 	
    		fi
