@@ -18,5 +18,10 @@ File Description :
 - kill_process.sh : stops the notifier by killing the processID saved in save_pid.txt
 - process.log : keeps track of the execution results 
 
+Preview of Sample Notification:
+![alt text](https://github.com/suragPuliyathamil/Quote-Notifier/blob/master/S2.png?raw=true)
+<br />
+![alt text](https://github.com/suragPuliyathamil/Quote-Notifier/blob/master/S1.png?raw=true)
+
  MIT License<br />
  Copyright (c) 2021 Surag Puliyathamil
